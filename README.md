@@ -132,6 +132,7 @@ Your submission in this section is NOT to train the best model. It is to **help 
 
 - You are required to code in a Jupyter Notebook, using Python.
 - Example libraries/frameworks you can use: Sklearn, TensorFlow, Keras, Pytorch, Huggingface's transformers, etc.
+- Feel free to take blocks of your code from existing public kaggle kernels or external tutorials online. Add a comment to indicate the source of your code if you do so.
 - Save the following files into the `submit/` folder:
   - One Jupyter notebook, detailing your entire ML pipeline as per instructions.
 - Do not submit any locally-saved embedding files.
