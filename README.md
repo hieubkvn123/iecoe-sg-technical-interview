@@ -4,7 +4,7 @@ Thank you for applying for a position with SAP. If you are reading this, it mean
 
 **Confidentiality requirements**: 
 - Please do not share the task or data to anyone.
-- Please delete the forked repository and your local files after the test.
+- Please delete the forked repository and your local files after the test. However, you are free to keep your Part 2 code if you want. 
 
 ## Introduction
 
@@ -16,7 +16,7 @@ This technical test is to assess the following:
 
 There are 2 parts to the test:
 
-- **Part 1**: data preparation based on requirements.
+- **Part 1**: Data preparation based on requirements.
 
 - **Part 2**: Machine-learning task.
 
@@ -31,7 +31,8 @@ There are 2 parts to the test:
 5. When you are done, commit and push your code to your repository.
 6. Create a Pull Request to this repository.
 7. Please make your submission within 1 week from the day you fork this repository.
-8. If you need any help, please contact ray.han@sap.com or traci.lim@sap.com.
+8. If you are not sure of any of the intructions, please exercise your own judgement and proceed accordingly.
+9. For non-test related queries, please contact ray.han@sap.com or traci.lim@sap.com.
 
 ## Part 1 (data preparation)
 
@@ -54,7 +55,7 @@ Your team is working on a contract related project. Your colleagues want to trai
       IsExecuted      Boolean describing the execution status of contract
       OcrText         OCR result of contract pdf
       QualityScore    A numeric float (0 to 1), to access the quality of text from OCR conversion
-      ```
+     ```
 
 2. `df_label_200906.gzip`
 
@@ -66,7 +67,7 @@ Your team is working on a contract related project. Your colleagues want to trai
       CaseId     A unique ID given to group of contracts
       label_1    boolean (description of label is not needed for test)
       label_2    boolean (description of label is not needed for test)
-      ```
+     ```
 
 ---
 
@@ -74,7 +75,7 @@ Your team is working on a contract related project. Your colleagues want to trai
 
 - Main objective is to merge `label_1` and `label_2` into `df_cases_200906.gzip`, so that the team can train text classification models using data from the `OcrText` field.
 
--  A `CaseId` can contain either one contract, or a group of contracts. Each `CaseId` is given only 1 set of labels. For each `CaseId`, you have to concatentate all `OcrText` fields of all VALID contracts.
+-  A `CaseId` can contain either one contract, or a group of contracts. However, each `CaseId` is given only 1 set of labels. Therefore, for each `CaseId`, you have to **concatentate** all `OcrText` fields of all VALID contracts.
 
 - Contracts are consider INVALID if any of the following occurs:
 
@@ -85,14 +86,18 @@ Your team is working on a contract related project. Your colleagues want to trai
 
    ```
     CaseId          	A unique ID given to group of contracts
-    ValidFileNames  	List of all valid file names
+    ValidFileNames  	List of all valid file names	
     InvalidFileNames	List of all invalid file
     OcrText         	OCR result of contract pdf
-    label_1    				boolean (description of label is not needed for test)
-    label_2    				boolean (description of label is not needed for test)
-    ```
+    label_1    			boolean (description of label is not needed for test)
+    label_2    			boolean (description of label is not needed for test)
+   ```
 
 - Export the final prepared dataset as `submit/df_final.gzip`.
+
+- Example of final prepared dataset:
+
+   - ![df_final_example](./misc/df_final_eg.png)
 
 #### Notes
 
@@ -126,11 +131,12 @@ Your submission in this section is NOT to train the best model. It is to **help 
 #### Notes
 
 - You are required to code in a Jupyter Notebook, using Python.
-- Example libraries/frameworks you can use: TensorFlow, Keras, Pytorch, Huggingface's transformers, etc.
+- Example libraries/frameworks you can use: Sklearn, TensorFlow, Keras, Pytorch, Huggingface's transformers, etc.
 - Save the following files into the `submit/` folder:
   - One Jupyter notebook, detailing your entire ML pipeline as per instructions.
 - Do not submit any locally-saved embedding files.
 - Do not attempt to hyper-parameter tune your models.
+- If you lack CPU or GPU resources, feel free to use Google Colab, or re-sample your dataset to be smaller. 
 - Other than the points listed in instructions, there are no strict rules on what to include in your jupyter notebook. You are free to apply data cleaning and exploratory data analysis on top of whatever that is required.
 - The following will be evaluated:
   - Code correctness
