@@ -4,7 +4,7 @@ Thank you for applying for a position with SAP. If you are reading this, it mean
 
 **Confidentiality requirements**: 
 - Please do not share the task or data to anyone.
-- Please delete the forked repository and your local files after the test. However, you are free to keep your Part 2 code if you want. 
+- Please delete the forked repository and your local files after the test. However, you are free to keep your code if you want. 
 
 ## Introduction
 
