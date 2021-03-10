@@ -1,6 +1,6 @@
 # Technical Test for Data Scientist Intern
 
-Thank you for applying for a position with SAP. If you are reading this, it means that you have exhibited a set of desirable qualities during your first-stage interview. We would like to access your technical skills further by working on one problem. 
+Thank you for applying for a position with SAP. If you are reading this, it means that you have exhibited a set of desirable qualities during your first-stage interview. We would like to access your technical skills further. 
 
 **Confidentiality requirements**: 
 - Please do not share the task or data to anyone.
